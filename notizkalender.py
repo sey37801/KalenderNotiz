@@ -8,7 +8,7 @@ from datetime import datetime
 DATA_FILE = "notizen.json"
 
 # -----------------------------
-# Modernes Oblivion-Dark-Theme
+# Theme Oblivion-Dark
 # -----------------------------
 BG_MAIN = "#121212"
 BG_PANEL = "#1A1A1A"
@@ -25,7 +25,7 @@ FONT_MAIN = ("Segoe UI", 12)
 FONT_BUTTON = ("Segoe UI", 10, "bold")
 FONT_TITLE = ("Segoe UI", 18, "bold")
 
-# Deutsche Monatsnamen
+# Monate
 MONTH_NAMES = [
     "",
     "Januar", "Februar", "März", "April", "Mai", "Juni",
@@ -48,7 +48,7 @@ def save_data(data):
 data = load_data()
 
 # -----------------------------
-# Export als TXT
+# Export to TXT zusammenfassung
 # -----------------------------
 def export_txt():
     file_path = filedialog.asksaveasfilename(
@@ -69,7 +69,7 @@ def export_txt():
 
 # -----------------------------
 # Hauptfenster
-# -----------------------------
+# ----------------------------
 root = tk.Tk()
 root.title("Notizkalender – Oblivion Style")
 root.geometry("1350x780")
@@ -88,7 +88,7 @@ current_month = now.month
 current_day = now.day
 
 # -----------------------------
-# Panels (3 Spalten)
+# Panels 
 # -----------------------------
 left_panel = tk.Frame(root, width=260, bg=BG_PANEL)
 middle_panel = tk.Frame(root, width=350, bg=BG_PANEL)
@@ -197,7 +197,7 @@ def show_summary():
                     txt.insert("end", f"{day}.{month}.{year} – {note}\n")
 
 # -----------------------------
-# Monatsbuttons erzeugen
+# Monatsbuttons 
 # -----------------------------
 for m in range(1, 13):
     btn = tk.Button(
